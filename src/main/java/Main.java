@@ -1,5 +1,3 @@
-package com.ninzy;
-
 import java.util.Arrays;
 
 public class Main {
@@ -7,7 +5,7 @@ public class Main {
 
         String[] colors = new String[5];
         colors[0] = "asd";
-        colors[1] = "Shit";
+        colors[1] = "cool";
 
         System.out.println(Arrays.toString(colors));
 

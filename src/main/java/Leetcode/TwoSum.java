@@ -1,4 +1,4 @@
-package com.ninzy.Leetcode;
+package Leetcode;
 
 
 

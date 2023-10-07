@@ -1,4 +1,4 @@
-package com.ninzy.DataStructure;
+package DataStructure;
 
 import java.util.*;
 
