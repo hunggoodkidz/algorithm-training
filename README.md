@@ -1,2 +1,3 @@
-# leetcode-training
-Just practicing some logic thinking &amp; data structure, algorithm skills
+## Algorithm Fun House 
+
+Where you can enjoy my Disneyland for amazing quick maffs things
