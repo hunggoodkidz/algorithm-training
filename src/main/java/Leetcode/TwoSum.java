@@ -28,7 +28,7 @@ public class TwoSum {
 
         for(int i = 0 ; i< nums.length ; i++){
             for(int j = i + 1 ; j < nums.length; j++){
-                if(nums[i] + nums[j] == target){ // This is technical TwoSum man, it's like nums + nums
+                if(nums[i] + nums[j] == target){ // This is technically TwoSum man, it's like nums + nums
                     a[0] = i;
                     a[1] = j;
                     break;
