@@ -12,6 +12,8 @@ public class TheArrays {
         a[3] = "problem";
         a[4] = "to me!!";
 
+        int[] numbers = {2,3,4,5};
+
         System.out.println(Arrays.toString(a));
 
         for ( int i = 0 ; i < a.length ; i++){
