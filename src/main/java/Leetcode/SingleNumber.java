@@ -12,7 +12,7 @@ public class SingleNumber {
 //        a ^= 2 (a = 6 ^ 2 = 4)
 
         int[] nums = {4, 1, 2, 1, 2};
-        int result = singleNumber(nums);
+        int result = anotherSingle(nums);
         System.out.println("The single number is: " + result);
     }
 
@@ -30,5 +30,16 @@ public class SingleNumber {
             a ^= nums[i];
         }
         return a;
+    }
+
+    public static int anotherSingle(int[] nums){
+        int count = 0;
+        for (int i = 0; i < nums.length - 2; i += 2) {
+            if(nums[i] != nums[i + 1]){
+                return nums[i];
+            }
+        }
+
+        return nums[nums.length - 1];
     }
 }

@@ -6,10 +6,10 @@ import java.util.Map;
 
 public class TwoSum {
     public static void main(String[] args){
-        int nums[] = {2, 7, 11, 15};
-        int target = 9;
+        int nums[] = {2, 7, 11, 15,16};
+        int target = 13;
         //int a[] = twoSum(nums, target);
-        int a[] = twoSumHashMap(nums,target);
+        int a[] = twoSumHashMap2(nums,target);
         System.out.println("Output: [" + a[0] + "," + a[1] + "]");
     }
 
@@ -27,9 +27,34 @@ public class TwoSum {
 //    Input: nums = [3,3], target = 6
 //    Output: [0,1]
 
+    public static  int[] twoSumHashMap2(int[] nums, int target){
+
+        Map<Integer,Integer> hashMap = new HashMap<>();
+        int[] arr = new int[2];
+        for(int i = 0 ; i < nums.length ; i++){
+            int j = target-nums[i];
+            if(hashMap.containsKey(j)){
+                // nums[i] + nums[j];
+                arr[0] = hashMap.get(j);
+                arr[1] = i;
+                break; // this one is: return arr;
+                //return arr;
+                //return new int[]{hashMap.get(i),j};
+            }
+            hashMap.put(nums[i], i);
+        }
+        // target= nums[i} + num[j];
+        // <=> nums[j] =  target - nums[i];
+        // If no solution is found, return an empty array or handle it as needed.
+        //return new int[0]; // return cho có thui nhaaaa
+        //throw new IllegalArgumentException("No solution found");
+        return arr;
+
+    }
+
     public static int[] twoSumHashMap(int[] nums, int target){
         // Create a hashmap to store numbers and their indices.
-        HashMap<Integer, Integer> numToIndex = new HashMap<>();
+        Map<Integer, Integer> numToIndex = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i]; // Calculate the complement needed to reach the target.

@@ -8,9 +8,29 @@ public class HashMapAlgo {
 
         //hashMapping();
         //TestMapwithString();
-        hashMapMenu();
+        //hashMapMenu();
+        hashMapCafeMenu();
     }
 
+    public static void hashMapCafeMenu(){
+        Map<String,Integer> menu = new HashMap<>();
+        menu.put("Trà sữa", 20000 );
+        menu.put("Coffee", 10000);
+        menu.put("Trà sen vàng",30000);
+
+        for (String thucdon: menu.keySet()) {
+            //System.out.println(thucdon + " - " + menu.get(thucdon) + " VND");
+            System.out.println("Tên nước uống: " + thucdon);
+        }
+        for (Integer giaTien: menu.values()) {
+            System.out.println(giaTien + " "  + menu.containsValue(giaTien));
+        }
+        System.out.println("Entries of Menu Coffee");
+        for (Map.Entry<String,Integer> entry : menu.entrySet()) {
+        System.out.println(entry.getKey() + " - " + entry.getValue() + " VND");
+        }
+
+    }
     public static void hashMapMenu(){
         // Cafe sữa - 15000 VND
         // Trà đá - 3000 VND

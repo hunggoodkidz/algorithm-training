@@ -29,12 +29,12 @@ public class SortAlgorithm {
 //            System.out.print(num + " ");
 //        }
 
-//        insertionSort(arr);
-//        System.out.println();
-//        System.out.print("Insertion Sort: ");
-//        for (int num: arr) {
-//            System.out.print(num + " ");
-//        }
+        insertionSort(arr);
+        System.out.println();
+        System.out.print("Insertion Sort: ");
+        for (int num: arr) {
+            System.out.print(num + " ");
+        }
 
 //        quickSort(arr, 0, arr.length - 1);
 //        System.out.print("Quick Sort:");
@@ -50,6 +50,20 @@ public class SortAlgorithm {
 //        }
     }
 
+
+    public static void insertionSorting(int arr[]){
+
+        for (int i = 0; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while(j >= 0 && arr[j] > key){
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+
+    }
     public static void swap(int arr[], int i , int j){
         int temp = arr[i];
         arr[i] = arr[j];
@@ -205,6 +219,18 @@ public class SortAlgorithm {
         return i + 1;
     }
 
+    public static void insertionShit(int arr[]){
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while(j >= 0 && arr[j] > key){
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
+        }
+    }
+
     public static void insertionSort(int arr[]){
 
         int n = arr.length;
@@ -268,4 +294,12 @@ public class SortAlgorithm {
 //            }
 //        }
 //    }
+
+    // for (int i = 0; i < arr.size(); i++) {
+    //     for (int j = i + 1; j < arr.size(); j++) {
+    //         if(arr.get(i) > arr.get(j)){
+    //             int temp = arr.get(i);
+    //             arr.set(i, arr.get(j));
+    //             arr.set(j, temp);
+    //         }
 }
