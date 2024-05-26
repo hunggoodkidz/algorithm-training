@@ -1,6 +1,6 @@
+package ChallengeTest;
 
-
-public class Main {
+public class Q1 {
     public static double calculateBalance(double initialAmount) {
         double balance = initialAmount;
         for (int year = 1; year <= 10; year++) {
@@ -14,6 +14,6 @@ public class Main {
     public static void main(String[] args) {
         double initialAmount = 250.0;
         double finalBalance = calculateBalance(initialAmount);
-        System.out.printf("The final balance after 10 years is: $%.2f", finalBalance);
+        System.out.printf("The final balance after 10 years is: $%f", finalBalance);
     }
 }
