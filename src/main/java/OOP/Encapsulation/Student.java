@@ -1,6 +1,6 @@
 package OOP.Encapsulation;
 
-public class Student {
+public class Student extends Graduation {
 
     private String name;
     private int age;
